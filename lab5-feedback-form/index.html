@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form novalidate>
+        <div id="form-status" aria-live="polite"></div>
+        <label for="name">Ваше имя:</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Введите ваше имя"
+            aria-describedby="name-error"
+            required
+        >
+        <small class="error" id="name-error"></small>
+        <label for="email">Ваша электронная почта</label>
+        <small id="email-help">
+            Укажите действующий адрес электронной почты
+        </small>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            aria-describedby="email-help email-error"
+            required
+        >
+        <small class="error" id="email-error"></small>
+        <label for="topic">Тема обращения</label>
+        <input
+            type="text"
+            id="topic"
+            name="topic"
+            placeholder="Введите тему обращения"
+            aria-describedby="message-help message-error"
+            required
+        >
+        <label for="message">Ваше сообщение</label>
+        <small id="message-help">
+            Опишите свой вопрос или проблему
+        </small>
+        <textarea
+            id="message"
+            name="message"
+            placeholder="Напишите ваше сообщение"
+            rows="5"
+            aria-describedby="message-help"
+            required
+        ></textarea>
+        <small class="error" id="message-error"></small>
+        <button type="submit">Отправить</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
