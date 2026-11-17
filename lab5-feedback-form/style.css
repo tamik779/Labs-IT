@@ -93,7 +93,7 @@ button:active {
     margin-top:5px;
     margin-bottom:10px;
 }
-input:invlid,
+input:invalid,
 textarea:invalid{
     border-color:#ccc
 }
